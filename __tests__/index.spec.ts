@@ -17,6 +17,10 @@ describe(Cnpj.from, () => {
 
     expect(formatted.equals(stripped) && formatted.equals(withoutDvs)).toBe(true)
   })
+
+  test('Populates _tag', () => {
+    expect(Cnpj.from('31.214.261/0001-38')._tag).toBe('Cnpj')
+  })
 })
 
 describe(Cnpj.random, () => {

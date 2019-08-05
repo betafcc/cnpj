@@ -43,6 +43,8 @@ const format = (s: string): CnpjString =>
 const randInt = (max: number): number => Math.floor(Math.random() * (max + 1))
 
 export class Cnpj {
+  readonly _tag: 'Cnpj' = 'Cnpj'
+
   /**
    * Retorna `true` se o argumento é uma `string` com um cnpj válido
    *
